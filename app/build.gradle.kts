@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.venky.empinfo"
     compileSdk {
-        version = release(36) {
+        version = release(37) {
             minorApiLevel = 1
         }
     }
@@ -16,7 +16,7 @@ android {
     defaultConfig {
         applicationId = "com.venky.empinfo"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
@@ -53,7 +53,13 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     // Hilt dagger
     implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
+    implementation(libs.androidx.datastore.preferences)
+   //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp.logging)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))

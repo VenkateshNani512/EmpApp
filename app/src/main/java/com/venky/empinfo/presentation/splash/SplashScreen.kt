@@ -1,4 +1,4 @@
-package com.venky.empinfo.ui.splash
+package com.venky.empinfo.presentation.splash
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -19,7 +19,7 @@ fun SplashScreen(onSplashFinished: () -> Unit) {
 
     LaunchedEffect(Unit){
         delay(1500.milliseconds)
-        onSplashFinished
+        onSplashFinished()
     }
     Box(modifier =
         Modifier.fillMaxSize().background(Color.White),
